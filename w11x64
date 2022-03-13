@@ -3,8 +3,7 @@ wget -O win10.iso https://dl.windows-iso.net/Win10_21H1_English_x64.iso
 echo "Download ngrok"
 wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip > /dev/null 2>&1
 unzip ngrok-stable-linux-amd64.zip > /dev/null 2>&1
-read -p "Ctrl + V Authtoken: " CRP 
-./ngrok authtoken $CRP 
+./ngrok authtoken 25oW5QZFCbbNVN2UBxBDBcULOtN_57Jzz7VZTcdVTh4rU2gpt
 nohup ./ngrok tcp 3388 &>/dev/null &
 echo Downloading File From toigamo.blogspot.com
 apt-get install qemu
