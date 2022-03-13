@@ -1,5 +1,5 @@
 echo "Đang tải file xuống - Download Windows files"
-wget -O win11.iso https://software.download.prss.microsoft.com/sg/Win11_English_x64v1.iso?t=4e5aa9b4-42f1-467d-a113-4da4435166e3&e=1647224185&h=b93344510bc0330ac94ee6485717eff487cba8e2d70ef4b6431841f36a41ba99
+wget -O win10.iso https://dl.windows-iso.net/Win10_21H1_English_x64.iso
 echo "Download ngrok"
 wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip > /dev/null 2>&1
 unzip ngrok-stable-linux-amd64.zip > /dev/null 2>&1
@@ -18,5 +18,5 @@ echo Password: Akuh.Net
 echo "Chờ 1-2 phút để hoàn tất - Wait 1-2 minute to finish bot"
 echo "Vui lòng không tắt cửa sổ này - Dont Close This Tab"
 echo "Please support toigamo.blogspot.com thank you"
-qemu-system-x86_64 -boot d -cdrom .\win11.iso -m 8G -smp cores=4 -net user,hostfwd=tcp::3388-:3389 -net nic -object rng-random,id=rng0,filename=/dev/urandom -device virtio-rng-pci,rng=rng0 -vga vmware -nographic
+qemu-system-x86_64 -boot d -cdrom .\win10.iso -m 8G -smp cores=4 -net user,hostfwd=tcp::3388-:3389 -net nic -object rng-random,id=rng0,filename=/dev/urandom -device virtio-rng-pci,rng=rng0 -vga vmware -nographic
 sleep 43200
